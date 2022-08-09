@@ -1,0 +1,34 @@
+{
+  "language": "en",
+  "websites": {
+    "google": "https://www.google.com/",
+    "youtube": "https://www.youtube.com/",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "twitter": "https://www.twitter.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "gmail": "https://www.mail.google.com/",
+    "classroom": "https://classroom.google.com/",
+    "github": "https://www.github.com/",
+    "stackoverflow": "https://www.stackoverflow.com/",
+    "spotify": "https://www.spotify.com/"
+  },
+
+  "api": {
+    "wolframalpha": {
+      "client": "GEPT3A-84GLL75Q22",
+      "website": "https://www.wolframalpha.com/"
+    },
+    "news": {
+      "client": "6fdbcbc57d9143319d16f1055298eb29",
+      "website": "https://newsapi.org/v2/",
+      "query": {
+        "top-headlines": "top-headlines?country=in",
+        "everything": "everything?q=",
+        "category": "&category=",
+        "source": "&sources=",
+        "attackApi": "&apiKey="
+      }
+    }
+  }
+}
