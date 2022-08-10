@@ -1,0 +1,19 @@
+{
+  "music": ["Play music", "I want to listen to"],
+  "website": ["Open website", "I want to visit"],
+  "search": ["Search", "I want to search"],
+  "jokes": ["Tell me a joke", "I want to hear a joke"],
+  "date": ["What is the date", "What is the date today"],
+  "time": ["What is the time", "What is the time now"],
+  "date-time": ["What is the date and time", "What is the date and time now"],
+  "exit": ["exit", "quit", "bye", "goodbye", "exit program", "exit program"],
+  "edit": ["edit settings", "change settings"],
+  "mail": ["send mail", "send email", "send mail to"],
+  "dictionary": ["lookup","look up", "synonyms", "antonyms", "noun", "verb", "adjective"],
+  "solve": ["ask", "ask wolfram", "define"],
+  "news": ["top headlines","top headline", "top news"],
+  "facts": ["Tell me a fact", "I want to hear a fact"],
+  "youtube": ["Youtube","Search on Youtube"],
+  "listen": ["Hey Hazel"],
+  "change-voice": ["Change Voice"]
+}

@@ -1,0 +1,23 @@
+{
+    "0": {
+        "name": "Microsoft David Desktop - English (United States)",
+        "id": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-US_DAVID_11.0",
+        "default": "false",
+        "index": 0,
+        "callName": "David"
+    },
+    "1": {
+        "name": "Microsoft Hazel Desktop - English (Great Britain)",
+        "id": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-GB_HAZEL_11.0",
+        "default": "true",
+        "index": 1,
+        "callName": "Hazel"
+    },
+    "2": {
+        "name": "Microsoft Zira Desktop - English (United States)",
+        "id": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_EN-US_ZIRA_11.0",
+        "default": "false",
+        "index": 2,
+        "callName": "Zira"
+    }
+}

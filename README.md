@@ -2,23 +2,20 @@
  Implementation Virtual Assistant
  
 ## Features
-- [] Time and Date
-- [] Play Music
-  - [x] Local Music
-  - [] Spotify (Experimental)
-- [] Weather Conditions
+- [-] Time and Date
+- [-] Weather Conditions
+- [-] Encrypt JSON Data
+- [x] Play Local Music
 - [x] Random Jokes
 - [x] Random Facts
 - [x] Send an Email
   - [x] Sender Email
-  - [] User's Email
+  - [x] User's Email
 - [x] Calculate Simple Problems
 - [x] Dictionary to look up
-- [] Get News
-  - [] Top News
-  - [] Search according to User
-- [] Open Website
-  - [x] Google, Youtube, etc
-  - [] Search on some website
-- [] Open Windows App (Experimental)
-- [] Logging (Experimental)
+- [x] Get Top News
+- [x] Open Website
+- [x] Check Google Maps (Harsh)
+- [x] Add Command Mapping JSON
+- [x] Change Voice
+

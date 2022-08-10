@@ -29,6 +29,9 @@
         "source": "&sources=",
         "attackApi": "&apiKey="
       }
+    },
+    "google":{
+      "search": "https://www.google.com/search?q="
     }
   }
 }

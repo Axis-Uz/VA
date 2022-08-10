@@ -4,4 +4,5 @@ harry.py
 .cache
 logger.py
 test.ipynb
-data/user_profile.json
+__pycache__/
+data/encrypt.py
