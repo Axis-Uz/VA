@@ -1,0 +1,17 @@
+{
+  "wolframalpha": {
+    "client": "GEPT3A-84GLL75Q22",
+    "website": "https://www.wolframalpha.com/"
+  },
+  "news": {
+    "client": "6fdbcbc57d9143319d16f1055298eb29",
+    "website": "https://newsapi.org/v2/",
+    "query": {
+      "top-headlines": "top-headlines?country=in",
+      "everything": "everything?q=",
+      "category": "&category=",
+      "source": "&sources=",
+      "attackApi": "&apiKey="
+    }
+  }
+}

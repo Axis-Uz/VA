@@ -2,11 +2,11 @@
   "user": {
     "name": "Axis",
     "email": "axis4uzair@gmail.com",
-    "password": "gAAAAABi890wTdyDQIgOU6JlhyTwfFdSaDetsmj_SNOx6FmFPI3sMj0a3-CXtWDkutRE6stCVSDrnOJ2wXDKWhCivEWprmn2wNEEmimAA0AS5WZv-jzJEYc="
+    "password": ""
   },
-  "music-dir": "D:/Transfer/Music/LS-F-KPS-320/LS-F-KPS-320",
   "contacts": {
     "uzair": { "name": "Uzair Khan", "email": "uzkhan2002@gmail.com" },
     "rhea": { "name": "Rhea Menon", "email": "rhea.menon106@gmail.com" }
-  }
+  },
+  "music-dir": "D:/Transfer/Music/LS-F-KPS-320/LS-F-KPS-320"
 }
