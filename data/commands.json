@@ -1,35 +1,21 @@
 {
   "music": ["Play music", "I want to listen to"],
-
   "website": ["Open website", "I want to visit"],
-
   "search": ["Search", "I want to search"],
-
   "jokes": ["Tell me a joke", "I want to hear a joke"],
-
-  "time": ["What is the time", "What is the time now", "Time", "The Time"],
-
-  "date": ["What is the date", "Date", "The Date", "What is the date today"],
-
-  "exit": ["exit", "quit", "bye", "goodbye", "exit program", "exit program"],
-
-  "edit": ["edit settings", "change settings"],
-
-  "email": ["send mail to", "send mail"],
-
+  "time": ["What is the time now", "Time"],
+  "date": ["What is the date", "Date"],
+  "exit": ["exit", "quit", "bye", "good bye"],
+  "email": ["send a mail to", "send mail"],
   "dictionary": ["lookup", "look up"],
-
+  "lock": ["Windows Lock"],
+  "recycle": ["Empty Recycle Bin", "Recycle Bin"],
+  "sleep": ["Go to Sleep", "Sleep Mode"],
   "solve": ["ask wolf", "define"],
-
-  "news": ["top headlines", "top headline", "top news"],
-
+  "news": ["top headlines", "top news"],
   "facts": ["Tell me a fact", "I want to hear a fact"],
-
-  "youtube": ["Youtube", "Search on Youtube"],
-
-  "listen": ["Hey Hazel"],
-
-  "cls": ["clear screen", "clear"],
-
-  "change-mode": ["Write Mode", "Typing Mode", "Voice Mode", "Change Voice"]
+  "youtube": ["Youtube"],
+  "cls": ["clear"],
+  "weather": ["Weather", "What is the Forecast today", "Forecast Weather"],
+  "change-mode": ["Write Mode", "Typing Mode", "Voice Mode", "Change Mode"]
 }

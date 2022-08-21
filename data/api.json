@@ -3,6 +3,11 @@
     "client": "GEPT3A-84GLL75Q22",
     "website": "https://www.wolframalpha.com/"
   },
+  "openweather": {
+    "client": "f44e933c024ea797fd3adb8df486c1c8",
+    "url": "http://api.openweathermap.org/data/2.5/weather?q="
+  },
+
   "news": {
     "client": "6fdbcbc57d9143319d16f1055298eb29",
     "website": "https://newsapi.org/v2/",

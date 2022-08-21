@@ -1,5 +1,6 @@
 {
   "language": "en",
+  "city": "Mumbai",
   "websites": {
     "google": "https://www.google.com/",
     "youtube": "https://www.youtube.com/",
@@ -7,11 +8,12 @@
     "instagram": "https://www.instagram.com/",
     "twitter": "https://www.twitter.com/",
     "linkedin": "https://www.linkedin.com/",
-    "gmail": "https://www.mail.google.com/",
+    "gmail": "https://mail.google.com/",
     "classroom": "https://classroom.google.com/",
     "github": "https://www.github.com/",
     "stackoverflow": "https://www.stackoverflow.com/",
-    "spotify": "https://www.spotify.com/"
+    "spotify": "https://www.spotify.com/",
+    "elearn": "https://www.youtube.com/c/eLearnersHub"
   },
 
   "web-query": {
