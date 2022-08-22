@@ -2,21 +2,21 @@ from fun import *
 
 with_params = {
     "youtube": playYouTube,
-    "facts": getFacts,
     "email": sendMail,
     "dictionary": useDictionary,
     "search": searchWikipedia,
     "website": openWebsite,
     "music": playMusic,
+    "weather": retrieveWeather,
 }
 
 without_params = {
     "sleep": goToSleep,
     "solve": solveProblems,
-    "weather": retrieveWeather,
     "lock": lockWin,
     "date": getDate,
     "time": getTime,
+    "facts": getFacts,
     "jokes": getJokes,
     "news": getNews,
     "recycle": emptyBin,
@@ -25,9 +25,8 @@ if __name__ == "__main__":
     def clear(): return os.system('cls')
     written_flag = False
     clear()
-    # while isConnected():
-    while written_flag:
-        wishMe()
+    wishMe()
+    while isConnected():
         if written_flag == False:
             query = acceptCommand()
         else:
@@ -47,7 +46,7 @@ if __name__ == "__main__":
                 print(query_key)
                 written_flag = True if written_flag == False else False
                 print(written_flag)
+                commands = {}
     else:
         speak("No Internet Connection 🙀 ", 'red')
         speak("Please Connect to Internet 😓", 'red')
-        # acceptCommand

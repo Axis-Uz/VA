@@ -1,5 +1,5 @@
-from fun import *
-from fun import voice
+from old_fun import *
+from old_fun import voice
 
 if __name__ == "__main__":
     def clear(): return os.system('cls')

@@ -1,15 +1,15 @@
 {
-    "date": "2022-08-21",
+    "date": "2022-08-22",
     "weather": {
-        "temp": 300.14,
-        "feels_like": 304.28,
-        "temp_min": 300.14,
-        "temp_max": 300.14,
-        "pressure": 1006,
-        "humidity": 94
+        "temp": 301.14,
+        "feels_like": 306.69,
+        "temp_min": 300.09,
+        "temp_max": 301.14,
+        "pressure": 1003,
+        "humidity": 89
     },
-    "description": "Haze",
-    "wind-speed": 6.17,
-    "wind-angle": 250,
+    "description": "Rain",
+    "wind-speed": 5.14,
+    "wind-angle": 260,
     "city": "Mumbai"
 }

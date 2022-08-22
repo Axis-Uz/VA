@@ -13,11 +13,6 @@
     "github": "https://www.github.com/",
     "stackoverflow": "https://www.stackoverflow.com/",
     "spotify": "https://www.spotify.com/",
-    "elearn": "https://www.youtube.com/c/eLearnersHub"
-  },
-
-  "web-query": {
-    "google-search": "https://www.google.com/search?q=",
-    "youtube-search": "https://www.youtube.com/results?search_query="
+    "learning": "https://www.youtube.com/c/eLearnersHub"
   }
 }
