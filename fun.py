@@ -194,8 +194,10 @@ def sendMail(query):  # @Varun
     """Send a Mail: import ssl,smtplib,email.message.EmailMessage"""
     sender = user_profile["email"]
     password = user_profile["password"]
-    receiver = stripCommand(query, "email").strip()
-    if receiver not in contacts or receiver == '':
+    c = stripCommand(query, "email").strip()
+    if c in contacts:
+        receiver = contacts[c]['email']
+    else:
         receiver = str(input("Receiver ?"))
 
     em = EmailMessage()
@@ -211,6 +213,7 @@ def sendMail(query):  # @Varun
             smtp.sendmail(sender, receiver, em.as_string())
             speak("Mail Sended")
     except Exception as e:
+        print(e)
         speak("Unable to Send the Mail !!")
 
 
@@ -295,7 +298,7 @@ def stripCommand(query: str, query_key: str):  # @Uzair
         for words in command.strip().split():
             if words.lower() in words_in_query:
                 words_in_query.remove(words.lower())
-    return " ".join(words_in_query)
+    return " ".join(words_in_query).strip()
 
 
 # @Uzair

@@ -6,7 +6,7 @@
   "time": ["What is the time now", "Time"],
   "date": ["What is the date", "Date"],
   "exit": ["exit", "quit", "goodbye", "bye", "close", "see you later"],
-  "email": ["send a mail to", "send mail"],
+  "email": ["send a mail to", "send mail", "send a mail"],
   "dictionary": ["lookup", "look up", "dictionary", "define"],
   "lock": ["Windows Lock", "Lock"],
   "recycle": ["Empty Recycle Bin", "Recycle Bin"],

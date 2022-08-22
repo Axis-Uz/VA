@@ -23,7 +23,7 @@ without_params = {
 }
 if __name__ == "__main__":
     def clear(): return os.system('cls')
-    written_flag = False
+    written_flag = True
     clear()
     wishMe()
     while isConnected():
