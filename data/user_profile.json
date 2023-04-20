@@ -1,42 +1,14 @@
 {
   "user": {
-    "name": "Axis",
-    "email": "axis4uzair@gmail.com",
-    "password": "euiehxkmxuurxjml"
+    "name": "Your Name",
+    "email": "user_name@gmail.com",
+    "password": ""
   },
   "contacts": {
-    "uzair": {
-      "name": "Uzair Khan",
-      "email": "uzkhan2002@gmail.com"
-    },
-    "rhea": {
-      "name": "Rhea Menon",
-      "email": "rhea.menon106@gmail.com"
-    },
-    "varun": {
-      "name": "Varun Kamble",
-      "email": "varunkamble2112@gmail.com"
-    },
-    "bhumika": {
-      "name": "Bhumika",
-      "email": "bhumika.ves@gmail.com"
-    },
-    "shivam": {
-      "name": "Shivam Gupta",
-      "email": "www.Shivam567@gmail.com"
-    },
-    "tejas": {
-      "name": "Tejas",
-      "email": "tejaspophale01@gmail.com"
-    },
-    "varad": {
-      "name": "Varad",
-      "email": "varad.4250@gmail.com"
-    },
-    "professor": {
-      "name": "Mahavir Advaya",
-      "email": "mahaviradvaya@ruiacollege.edu"
+    "friend": {
+      "name": "Friends Name",
+      "email": "user_name@gmail.com"
     }
   },
-  "music-dir": "D:/Transfer/Music/LS-F-KPS-320/LS-F-KPS-320"
+  "music-dir": "Music Folder Path"
 }

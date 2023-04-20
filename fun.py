@@ -25,23 +25,23 @@ import os
 import re
 
 
-def getTime():  # @Sarthak
+def getTime():  
     """Return Current Time: import datetime"""
     speak("The Time is "+datetime.datetime.now().strftime("%H:%M"))
 
 
-def getDate():  # @Sarthak
+def getDate():  
     '''Return Today Date: import datetime'''
     speak("Today's Date is "+str(datetime.datetime.now().date()))
 
 
-def lockWin():  # @Sarthak
+def lockWin():  
     '''Locks the Device: import subprocess'''
     speak("Locking the Device")
     subprocess.call('rundll32.exe user32.dll, LockWorkStation')
 
 
-def storeWeather():  # @Sarthak
+def storeWeather():  
     '''Store Website For A New Day In A JSON: import json,requests,datetime'''
     open_weather = stored_API["openweather"]
     stored_date = json.load(open("data/weather.json"))['date']
@@ -62,10 +62,10 @@ def storeWeather():  # @Sarthak
         dump_weather.setdefault('wind-angle', weather_data["wind"]["deg"])
         dump_weather.setdefault('city', weather_data["name"])
 
-        json.dump(dump_weather, open("weather.json", "w"), indent=4)
+        json.dump(dump_weather, open("data/weather.json", "w"), indent=4)
+    
 
-
-def retrieveWeather(query):  # @Sarthak
+def retrieveWeather(query):  
     '''Retrieve Stored Weather For Today: import json,datetime'''
     weatherData = json.load(open("data/weather.json"))
     today = str(datetime.datetime.now().date())
@@ -76,7 +76,7 @@ def retrieveWeather(query):  # @Sarthak
         speak("Min Temperature: " +
               str(math.floor(weatherData['weather']['temp_min']-273))+" Celsius")
         speak("Max Temperature: " +
-              str(math.floor(weatherData['weather']['temp_max']-273))+" Celsius")
+              str(math.ceil(weatherData['weather']['temp_max']-273))+" Celsius")
         speak("Humidity: "+str(weatherData['weather']['humidity'])+"%")
         speak("Description:"+str(weatherData['description']))
 
@@ -86,16 +86,17 @@ def retrieveWeather(query):  # @Sarthak
             speak("Atmospheric Pressure: " +
                   str(weatherData["weather"]["pressure"])+" millibar")
     else:
+        storeWeather()
         speak("Unable to Forecast,Cause of Rain & Showers I Guess.")
 
 
-def emptyBin():  # @Anurag
+def emptyBin():  
     '''Empty The Recycle Bin: import winshell'''
     winshell.recycle_bin().empty(confirm=False, show_progress=False, sound=True)
     speak("Emptied Recycle Bin")
 
 
-def getNews():  # @Anurag
+def getNews():  
     '''Return Top 3 Headlines: import newsapi.NewsApiClient'''
     client = NewsApiClient(api_key=stored_API['news']['client'])
     top_art = client.get_top_headlines(
@@ -108,7 +109,7 @@ def getNews():  # @Anurag
     engine.setProperty('rate', 150)
 
 
-def searchWikipedia(query):  # @Anurag
+def searchWikipedia(query):  
     '''Searches Wikipedia for the user's query: import wikipedia'''
     query = stripCommand(query, 'search')
     q = wikipedia.search(query)[0]
@@ -117,7 +118,7 @@ def searchWikipedia(query):  # @Anurag
     speak(results)
 
 
-def playMusic(query):  # @Rhea
+def playMusic(query):  
     '''Plays music from the user's directory: import json,os'''
     music_dir = json.load(open("data/user_profile.json"))["music-dir"]
     songs = [s.lower() for s in os.listdir(music_dir)]
@@ -132,7 +133,7 @@ def playMusic(query):  # @Rhea
         speak("I don't know that song")
 
 
-def playYouTube(query):  # @Rhea
+def playYouTube(query):  
     """Plays a YouTube video from the user's query import webbrowser"""
     query = stripCommand(query, 'youtube').replace(' ', '+')
     try:
@@ -142,7 +143,7 @@ def playYouTube(query):  # @Rhea
         speak("Unable to play youtube, please try again.")
 
 
-def useDictionary(query):  # @Rhea
+def useDictionary(query):  
     """Get Meaning of Words: import PyDictionary(pyd)"""
     dictionary = pyd.PyDictionary()
     query = stripCommand(query, 'dictionary')
@@ -155,7 +156,7 @@ def useDictionary(query):  # @Rhea
         speak("I don't know that")
 
 
-def solveProblems():  # @Harsh
+def solveProblems():  
     """Solve Basic Problem and GK Questions: import wolframalpha"""
     client = wolframalpha.Client(stored_API["wolframalpha"]["client"])
     speak("What do you want to ask ?")
@@ -168,20 +169,20 @@ def solveProblems():  # @Harsh
         speak("Unable to solve, please try again")
 
 
-def getFacts():  # @Harsh
+def getFacts():  
     """Returns a random fact: import randfacts"""
     speak("Here is a random fact")
     speak(randfacts.get_fact())
 
 
-def getJokes():  # @Harsh
+def getJokes():  
     """Returns a random joke: import dadjokes"""
     speak("Here is a random joke")
     joking = dadjokes.Dadjoke()
     speak(joking.joke)
 
 
-def openWebsite(query):  # @Varun
+def openWebsite(query):  
     """Opens a website from the user's stored url: import webbrowser """
     website = stripCommand(query, 'website')
     if stored_Websites.__contains__(website):
@@ -190,7 +191,7 @@ def openWebsite(query):  # @Varun
         speak("I don't know that website.")
 
 
-def sendMail(query):  # @Varun
+def sendMail(query):  
     """Send a Mail: import ssl,smtplib,email.message.EmailMessage"""
     sender = user_profile["email"]
     password = user_profile["password"]
@@ -198,7 +199,9 @@ def sendMail(query):  # @Varun
     if c in contacts:
         receiver = contacts[c]['email']
     else:
-        receiver = str(input("Receiver ?"))
+        receiver = str(input("Receiver > ")).strip()
+        if receiver not in contacts:
+            raise Exception
 
     em = EmailMessage()
     em['From'] = sender
@@ -217,7 +220,7 @@ def sendMail(query):  # @Varun
         speak("Unable to Send the Mail !!")
 
 
-def goToSleep():  # @Varun
+def goToSleep():  
     '''Put Listening to Sleep: import time'''
     speak("For how much time you want to stop from listening commands ?")
     time.sleep(int(acceptCommand()))
@@ -226,7 +229,7 @@ def goToSleep():  # @Varun
 #!---------------------------Important-----------------------
 
 
-def parseQuery(query):  # @Uzair
+def parseQuery(query):  
     "Maps the Query with the Appropriate Function: import re"
     query_key = ''
     for k, c in commands.items():
@@ -236,7 +239,7 @@ def parseQuery(query):  # @Uzair
                 return query_key
 
 
-def acceptCommand():  # @Uzair
+def acceptCommand():  
     """
     Accepts the user's command via the microphone and returns the string output 
     import speech_recognition,termcolor.cprint|colored
@@ -260,7 +263,7 @@ def acceptCommand():  # @Uzair
     return query.lower()
 
 
-def wishMe():  # @Uzair
+def wishMe():  
     """Greet the User: import datetime"""
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
@@ -274,7 +277,7 @@ def wishMe():  # @Uzair
           ". Please tell me how may I help you")
 
 
-def speak(text, color_passed='green'):  # @Uzair
+def speak(text, color_passed='green'):  
     """Inputted text is spoken: import json, termcolor.cprint|colored"""
     if type(text) == str:
         text = " ".join([w.capitalize() for w in text.split(" ")]).strip()
@@ -286,13 +289,13 @@ def speak(text, color_passed='green'):  # @Uzair
     engine.runAndWait()
 
 
-def getVoice():  # @Uzair
+def getVoice():  
     for k in voices.keys():
         if voices[k]['default'] == "true":
             return voices[k]
 
 
-def stripCommand(query: str, query_key: str):  # @Uzair
+def stripCommand(query: str, query_key: str):  
     words_in_query = query.split(" ")
     for command in commands[query_key]:
         for words in command.strip().split():
@@ -301,13 +304,12 @@ def stripCommand(query: str, query_key: str):  # @Uzair
     return " ".join(words_in_query).strip()
 
 
-# @Uzair
+
 user_profile = json.load(open('data/user_profile.json'))["user"]
 contacts = json.load(open('data/user_profile.json'))["contacts"]
 settings = json.load(open("data/va_settings.json"))
 stored_Websites = settings["websites"]
 stored_API = json.load(open("data/api.json"))
-
 voices = json.load(open("data/voices.json"))
 voice = getVoice()
 

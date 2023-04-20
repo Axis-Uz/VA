@@ -8,3 +8,4 @@ __pycache__/
 data/encrypt.py
 data/prototype.ipynb
 data/.filekey.key
+data/weather.json

@@ -1,6 +1,6 @@
 {
   "music": ["Play music", "I want to listen to"],
-  "website": ["Open website", "I want to visit"],
+  "website": ["Open website", "I want to visit", "Open"],
   "search": ["I want to search", "Search"],
   "jokes": ["Tell me a joke", "I want to hear a joke"],
   "time": ["What is the time now", "Time"],
